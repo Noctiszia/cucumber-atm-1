@@ -70,4 +70,8 @@ public class StepDefATM {
                      bank.findCustomer(id).getAccount().getBalance());
     }
 
+    @When("I deposit {float} from ATM")
+    public void i_deposit_to_atm(double amount) throws NotEnoughBalanceException{
+        atm.deposit(amount);
+    }
 }
